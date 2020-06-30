@@ -10,6 +10,7 @@
 block load
 {
 	es_load wcs/tools/manifest/hybrid
+	es_load wcs/tools/manifest/marine_class
 	es_load wcs/tools/manifest/protoss_carrier
 	es_load wcs/tools/manifest/warrior
 }
@@ -17,6 +18,7 @@ block load
 block unload
 {
 	es_unload wcs/tools/manifest/hybrid
+	es_unload wcs/tools/manifest/marine_class
 	es_unload wcs/tools/manifest/protoss_carrier
 	es_unload wcs/tools/manifest/warrior
 }
