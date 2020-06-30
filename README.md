@@ -1,4 +1,4 @@
-# [Racepack] Holliday Races - Version: (1.0.0B)
+# [Racepack] Novakiller Races - Version: (1.0.0B)
 This is an easy-to-install race package for Tha Pwned's version of the Warcraft-Source modification which can be found and downloaded [here](https://github.com/ThaPwned/WCS).
 
 
