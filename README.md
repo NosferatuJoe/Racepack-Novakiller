@@ -3,13 +3,14 @@ This is an easy-to-install race package for Tha Pwned's version of the Warcraft-
 
 
 ## What does this package do? - And what does it contain?
-Installing this package on to your server will add 4 new races to your Warcraft-Source server.
-All of the 4 races are remastered/reworked versions of Novakiller's races.
+Installing this package on to your server will add 5 new races to your Warcraft-Source server.
+All of the 5 races are remastered/reworked versions of Novakiller's races.
 
 
 **List of races:**
 - Hybrid
 - Marine Class
+- Jim Raynor
 - Protoss Carrier
 - Warrior
 
