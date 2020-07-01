@@ -11,6 +11,7 @@ block load
 {
 	es_load wcs/tools/manifest/hybrid
 	es_load wcs/tools/manifest/marine_class
+	es_load wcs/tools/manifest/jim_raynor
 	es_load wcs/tools/manifest/protoss_carrier
 	es_load wcs/tools/manifest/warrior
 }
@@ -19,6 +20,7 @@ block unload
 {
 	es_unload wcs/tools/manifest/hybrid
 	es_unload wcs/tools/manifest/marine_class
+	es_unload wcs/tools/manifest/jim_raynor
 	es_unload wcs/tools/manifest/protoss_carrier
 	es_unload wcs/tools/manifest/warrior
 }
