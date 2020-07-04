@@ -30,7 +30,6 @@ All of the 5 races are remastered/reworked versions of Novakiller's races.
 
 
 ## Future development plans
-- [ ] Change the method of the logging to be put in source-python's logs.
 - [ ] Fix any bugs/issues that gets reported.
 
 
