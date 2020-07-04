@@ -7,12 +7,12 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Spawn (START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Spawn (START)
 	}
 	es wcsgroup set ability_count event_var(userid) 3
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Spawn (END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Spawn (END)
 	}
 }
 
@@ -20,12 +20,12 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] OnChange (START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] OnChange (START)
 	}
 	es wcsgroup set ability_count server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] OnChange (END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] OnChange (END)
 	}
 }
 
@@ -33,7 +33,7 @@ block ward
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 1 (START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 1 (START)
 	}
 	es wcsgroup get ability_count wcs_count server_var(wcs_userid)
 	if (server_var(wcs_count) => 1) do
@@ -57,7 +57,7 @@ block ward
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 1 (END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 1 (END)
 	}
 }
 
@@ -65,7 +65,7 @@ block gravity
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 2 (START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 2 (START)
 	}
 	if (event_var(es_userdead) = 0) do
 	{
@@ -81,7 +81,7 @@ block gravity
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 2 (END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 2 (END)
 	}
 }
 
@@ -89,7 +89,7 @@ block freeze
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 3 (START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -123,7 +123,7 @@ block freeze
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 3 (END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 3 (END)
 	}
 }
 
@@ -131,7 +131,7 @@ block roots
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 4 (START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 4 (START)
 	}
 	es_xset wcs_execute_ultimate 0
 	es_getplayerteam wcs_team server_var(wcs_userid)
@@ -180,7 +180,7 @@ block roots
 	if (server_var(wcs_ultinotexec) = 1) then es wcs_cancelulti server_var(wcs_userid)
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 4 (END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 4 (END)
 	}
 }
 
@@ -188,7 +188,7 @@ block roots_path
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 4 (CHECKS START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 4 (CHECKS START)
 	}
 	es_exists ex userid server_var(wcs_targetid)
 	if (server_var(ex) = 1) do
@@ -235,7 +235,7 @@ block roots_path
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 4 (CHECKS END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 4 (CHECKS END)
 	}
 }
 
@@ -243,7 +243,7 @@ block roots_final
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 4 (EXECUTED START)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 4 (EXECUTED START)
 	}
 	es wcsgroup get is_frozen wcs_tmp4 server_var(wcs_targetid)
 	if (server_var(wcs_tmp4) == 1) do
@@ -272,6 +272,6 @@ block roots_final
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 20 400 1 20 100 1 100 155 255 255 10
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Protoss Carrier - [Block] Skill: 4 (EXECUTED END)
+		wcs_log -1 [Race]: Protoss Carrier - [Block] Skill: 4 (EXECUTED END)
 	}
 }

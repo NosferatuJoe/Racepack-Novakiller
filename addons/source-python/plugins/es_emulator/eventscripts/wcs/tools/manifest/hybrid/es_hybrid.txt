@@ -7,7 +7,7 @@ block spawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Spawn (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Spawn (START)
 	}
 	es wcsgroup get hybridskulls vector2 event_var(userid)
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(userid)
@@ -21,7 +21,7 @@ block spawn
 	es est_effect 10 #a 0 sprites\scanner_bottom.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 30 60 2 3 10 0 0 0 80 20 5	
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Spawn (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Spawn (END)
 	}
 }
 
@@ -29,12 +29,12 @@ block onchange
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] OnChange (START)
+		wcs_log -1 [Race]: Hybrid - [Block] OnChange (START)
 	}
 	es wcsgroup set hybridskulls server_var(wcs_userid) 0
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] OnChange (END)
+		wcs_log -1 [Race]: Hybrid - [Block] OnChange (END)
 	}
 }
 
@@ -42,7 +42,7 @@ block skulls
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 1 (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 	{
@@ -80,7 +80,7 @@ block skulls
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 1 (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 1 (END)
 	}
 }
 
@@ -88,14 +88,14 @@ block longjump
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 2 (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 2 (START)
 	}
 	es wcs_setfx longjump event_var(userid) + server_var(wcs_multiplier) 0
 	es_xmath wcs_multiplier * 100
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Hydra tail - Has increased your jump length to server_var(wcs_multiplier)%
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 2 (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 2 (END)
 	}
 }
 
@@ -103,14 +103,14 @@ block gravity
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 3 (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 3 (START)
 	}
 	es_delayed .2 wcs_setfx gravity event_var(userid) = server_var(wcs_gravity) 0
 	es_xmath wcs_gravity * 100
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Zealot legs - Reduced your gravity to server_var(wcs_gravity)%
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 3 (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 3 (END)
 	}
 }
 
@@ -118,13 +118,13 @@ block invis
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 4 (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 4 (START)
 	}
 	es_delayed .5 wcs_color event_var(userid) 255 255 255 server_var(wcs_invis) 0
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Dark templars coat - You're now less visible
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 4 (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 4 (END)
 	}
 }
 
@@ -132,7 +132,7 @@ block respawn
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 5 (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 5 (START)
 	}
 	if (server_var(wcs_dice5) <= server_var(wcs_chance)) do
 	{
@@ -151,7 +151,7 @@ block respawn
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 5 (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 5 (END)
 	}
 }
 
@@ -159,7 +159,7 @@ block mineral
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 6 (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 6 (START)
 	}
 	es wcsgroup get hybridskulls vector8 event_var(userid)
 	if (server_var(vector8) == 0) do
@@ -178,7 +178,7 @@ block mineral
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 6 (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 6 (END)
 	}
 }
 
@@ -186,7 +186,7 @@ block warp
 {
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 7 (START)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 7 (START)
 	}
 	es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 server_var(wcs_userid)
 	es_xmath wcs_z1 + 25
@@ -303,6 +303,6 @@ block warp
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		es_log [Race]: Hybrid - [Block] Skill: 7 (END)
+		wcs_log -1 [Race]: Hybrid - [Block] Skill: 7 (END)
 	}
 }
