@@ -1,13 +1,13 @@
 ////////////////////////
 //Novakiller Race Pack//
-//Version 1.0.0B      //
+//Version 1.0.1B      //
 ////////////////////////
 
 block weaponry
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 1 (START)
+		wcs_log [Race]: Make My Day - [Block] Skill: 1 (START)
 	}
 	if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 	{
@@ -25,7 +25,7 @@ block weaponry
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 1 (END)
+		wcs_log [Race]: Make My Day - [Block] Skill: 1 (END)
 	}
 }
 
@@ -33,7 +33,7 @@ block damage
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 2 (START)
+		wcs_log [Race]: Make My Day - [Block] Skill: 2 (START)
 	}
 	if (server_var(wcs_dice2) <= server_var(wcs_chance)) do
 	{
@@ -61,7 +61,7 @@ block damage
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 2 (END)
+		wcs_log [Race]: Make My Day - [Block] Skill: 2 (END)
 	}
 }
 
@@ -69,7 +69,7 @@ block slow
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 3 (START)
+		wcs_log [Race]: Make My Day - [Block] Skill: 3 (START)
 	}
 	if (server_var(wcs_dice3) <= server_var(wcs_chance)) do
 	{
@@ -97,7 +97,7 @@ block slow
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 3 (END)
+		wcs_log [Race]: Make My Day - [Block] Skill: 3 (END)
 	}
 }
 
@@ -105,7 +105,7 @@ block temporary_health
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 4 (START)
+		wcs_log [Race]: Make My Day - [Block] Skill: 4 (START)
 	}
 	es wcs_setfx health server_var(wcs_userid) + server_var(wcs_addhealth) 5
 	es_tell server_var(wcs_userid) #multi #green [WCS]: #lightgreen Adrenaline - You gained server_var(wcs_addhealth) health for 5 seconds
@@ -119,6 +119,6 @@ block temporary_health
 	es est_effect 10 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 40 80 .75 12 10 0 250 180 60 200 7
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Make My Day - [Block] Skill: 4 (END)
+		wcs_log [Race]: Make My Day - [Block] Skill: 4 (END)
 	}
 }

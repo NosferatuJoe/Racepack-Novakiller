@@ -1,13 +1,13 @@
 ////////////////////////
 //Novakiller Race Pack//
-//Version 1.0.0B      //
+//Version 1.0.1B      //
 ////////////////////////
 
 block money
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 1 (START)
+		wcs_log [Race]: Warrior - [Block] Skill: 1 (START)
 	}
 	es wcs_setfx cash event_var(userid) + server_var(wcs_money)
 	es_tell event_var(userid) #multi #green [WCS]: #lightgreen Your money pack gave you server_var(wcs_money) dollars!
@@ -17,7 +17,7 @@ block money
 	es est_effect 3 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 1 30 60 255 255 0 255
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 1 (END)
+		wcs_log [Race]: Warrior - [Block] Skill: 1 (END)
 	}
 }
 
@@ -25,7 +25,7 @@ block aura
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 2 (START)
+		wcs_log [Race]: Warrior - [Block] Skill: 2 (START)
 	}
 	es_delayed .2 wcs_setfx gravity event_var(userid) = server_var(wcs_gravity) 0
 	es wcs_setfx health event_var(userid) + server_var(wcs_addhealth) 0
@@ -36,7 +36,7 @@ block aura
 	es est_effect 3 #a 0 sprites/lgtning.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 2 40 10 200 255 205 255
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 2 (END)
+		wcs_log [Race]: Warrior - [Block] Skill: 2 (END)
 	}
 }
 
@@ -44,7 +44,7 @@ block axe
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 3 (START)
+		wcs_log [Race]: Warrior - [Block] Skill: 3 (START)
 	}
 	if (event_var(weapon) = knife) do
 	{
@@ -63,7 +63,7 @@ block axe
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 3 (END)
+		wcs_log [Race]: Warrior - [Block] Skill: 3 (END)
 	}
 
 }
@@ -72,7 +72,7 @@ block surrender
 {
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 4 (START)
+		wcs_log [Race]: Warrior - [Block] Skill: 4 (START)
 	}
 	if (server_var(wcs_dice4) <= server_var(wcs_chance)) do
 	{
@@ -87,6 +87,6 @@ block surrender
 	}
 	ifx true(wcs_race_debugging) do
 	{
-		wcs_log -1 [Race]: Warrior - [Block] Skill: 4 (END)
+		wcs_log [Race]: Warrior - [Block] Skill: 4 (END)
 	}
 }
