@@ -83,22 +83,21 @@ block phoenix
 	if (server_var(wcs_tmp3) == 0) do
 	{
 		es wcsgroup set has_used_phoenix event_var(userid) 1
-		if (server_var(wcs_dice4) <= server_var(wcs_chance)) do
+		if (server_var(wcs_dice) <= server_var(wcs_chance)) do
 		{
-			if (event_var(es_userdead) = 0) do
-			{
-				es wcsgroup get phoenix wcs_phoenix event_var(userid) event_var(es_userteam)
-				es_xmath wcs_phoenix + 1
-				es wcsgroup set phoenix event_var(userid) server_var(wcs_phoenix) event_var(es_userteam)
-				es_tell event_var(userid) #multi #green [WCS]: #lightgreen Shipment - The first from your team to die will be rescued
-				es_getplayerlocation wcs_x2 wcs_y2 wcs_z2 event_var(userid)
-				es_xmath wcs_z2 + 15
-				es est_effect 10 #a 0 sprites/fire1.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 50 600 2 70 10 0 255 255 255 255 8
-				es_xmath wcs_z2 + 15
-				es est_effect 10 #a 0 sprites/fire1.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 50 500 2 60 10 0 255 255 255 255 6
-				es_xmath wcs_z2 + 15
-				es est_effect 10 #a 0 sprites/fire1.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 50 400 2 50 10 0 255 255 255 255 4
-			}
+			if (event_var(es_userteam) = 2) then es_xset wcs_team #t
+			if (event_var(es_userteam) = 3) then es_xset wcs_team #ct
+			es wcsgroup get phoenix wcs_phoenix server_var(wcs_team)
+			es_xmath wcs_phoenix + 1
+			es wcsgroup set phoenix server_var(wcs_team) server_var(wcs_phoenix)
+			es_tell event_var(userid) #multi #green[WCS]#lightgreen Phoenix - The first from your team to die will be revived
+			es_getplayerlocation wcs_x2 wcs_y2 wcs_z2 event_var(userid)
+			es_xmath wcs_z2 + 15
+			es est_effect 10 #a 0 sprites/fire1.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 50 600 2 70 10 0 255 255 255 255 8
+			es_xmath wcs_z2 + 15
+			es est_effect 10 #a 0 sprites/fire1.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 50 500 2 60 10 0 255 255 255 255 6
+			es_xmath wcs_z2 + 15
+			es est_effect 10 #a 0 sprites/fire1.vmt server_var(wcs_x2) server_var(wcs_y2) server_var(wcs_z2) 50 400 2 50 10 0 255 255 255 255 4
 		}
 	}
 	ifx true(wcs_race_debugging) do
