@@ -1,4 +1,4 @@
-# [Racepack] Novakiller Races - Version: (1.0.2B)
+# [Racepack] Novakiller Races - Version: (1.0.3B)
 This is an easy-to-install race package for Tha Pwned's version of the Warcraft-Source modification which can be found and downloaded [here](https://github.com/ThaPwned/WCS).
 
 
@@ -27,9 +27,9 @@ All of the 5 races are remastered/reworked versions of Novakiller's races.
 - Drag and drop the two folders named: "cfg" and "addons" in to the directory.
 - Now go to csgo/cfg find and open the file named: "autoexec.cfg".
 - Add the following line: ```es_load wcs/loaders/racepack_novakiller``` to the file, save it, and close the file.
-- Go to csgo/cfg/source-python/wcs/ and open the file named: ```Racepack Novakiller - (Version 1.0.2B).ini```.
+- Go to csgo/cfg/source-python/wcs/ and open the file named: ```Racepack Novakiller - (Version 1.0.3B).ini```.
 - Copy all the text and paste it in your races.ini file and restart your the server.
-- NOTE! If you don't have a races.ini file already, then just change the name of the file from ```Racepack Novakiller - (Version 1.0.2B).ini``` to ```races.ini``` and then restart your server.
+- NOTE! If you don't have a races.ini file already, then just change the name of the file from ```Racepack Novakiller - (Version 1.0.3B).ini``` to ```races.ini``` and then restart your server.
 
 
 ## Known Bugs & Issues

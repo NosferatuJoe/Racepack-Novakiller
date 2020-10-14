@@ -1,6 +1,6 @@
 ////////////////////////
 //Novakiller Race Pack//
-//Version 1.0.2B      //
+//Version 1.0.3B      //
 ////////////////////////
 
 block spawn
@@ -136,8 +136,8 @@ block respawn
 	}
 	if (server_var(wcs_dice5) <= server_var(wcs_chance)) do
 	{
-		es wcs_getweapon event_var(userid) wcs_primary 1
-		es wcs_getweapon event_var(userid) wcs_secondary 2	
+		es playerget primary wcs_primary event_var(userid)
+		es playerget secondary wcs_secondary event_var(userid)
 		es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(userid)
 		es_delayed 1 wcs_spawn event_var(userid) 1
 		es_delayed 1.1 wcs_teleport event_var(userid) server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1)
