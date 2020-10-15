@@ -157,7 +157,7 @@ block temporary_speed
 		wcs_log [Race]: Jay Raynor - [Block] Skill: 6 (START)
 	}
 	es_xrand wcs_speed 5 8
-	es_math server_var(wcs_speed) / 100
+	es_xmath wcs_speed / 100
 	es wcs_setfx speed server_var(wcs_userid) + server_var(wcs_speed) 0
 	es_tell server_var(wcs_userid) #multi #green [WCS]: #lightgreen Stim pack - You sacrificed 10 health for more speed
 	es damage server_var(wcs_userid) 10 1 server_var(wcs_userid)
