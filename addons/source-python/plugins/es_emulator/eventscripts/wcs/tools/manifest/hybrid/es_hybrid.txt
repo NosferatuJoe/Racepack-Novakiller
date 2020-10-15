@@ -1,6 +1,6 @@
 ////////////////////////
 //Novakiller Race Pack//
-//Version 1.0.3B      //
+//Version 1.0.4B      //
 ////////////////////////
 
 block spawn
@@ -139,14 +139,11 @@ block respawn
 		es playerget primary wcs_primary event_var(userid)
 		es playerget secondary wcs_secondary event_var(userid)
 		es_getplayerlocation wcs_x1 wcs_y1 wcs_z1 event_var(userid)
-		es_delayed 1 wcs_spawn event_var(userid) 1
-		es_delayed 1.1 wcs_teleport event_var(userid) server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1)
-		es_delayed 1.6 wcs_setfx speed event_var(userid) + .25 0
-		es_delayed 1.6 wcs_setfx health event_var(userid) + 75 0
-		es_delayed 1.6 wcs_setfx gravity event_var(userid) - .1 0
+		es_delayed 2.5 wcs_spawn event_var(userid) 1
+		es_delayed 2.6 wcs_teleport event_var(userid) server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1)
 		es_emitsound player event_var(userid) wcs/resurrect.wav 1.0 0.3
-		es_delayed .1 es_give event_var(userid) server_var(wcs_primary)
-		es_delayed .1 es_give event_var(userid) server_var(wcs_secondary)
+		es_delayed 2.6 es_give event_var(userid) server_var(wcs_primary)
+		es_delayed 2.6 es_give event_var(userid) server_var(wcs_secondary)
 		es wcs_centertell event_var(userid) You'll be respawned!	
 	}
 	ifx true(wcs_race_debugging) do

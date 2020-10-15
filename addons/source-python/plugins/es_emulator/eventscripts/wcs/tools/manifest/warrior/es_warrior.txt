@@ -1,6 +1,6 @@
 ////////////////////////
 //Novakiller Race Pack//
-//Version 1.0.3B      //
+//Version 1.0.4B      //
 ////////////////////////
 
 block money
@@ -81,9 +81,6 @@ block surrender
 		es est_effect 11 #a 0 sprites/yelflare1.vmt server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1) 2 4 180
 		es_delayed 2 wcs_spawn event_var(userid) 1
 		es_delayed 2.1 wcs_teleport event_var(userid) server_var(wcs_x1) server_var(wcs_y1) server_var(wcs_z1)
-		es_delayed 2.6 wcs_setfx speed event_var(userid) + .25 0
-		es_delayed 2.6 wcs_setfx health event_var(userid) + 75 0
-		es_delayed 2.6 wcs_setfx gravity event_var(userid) - .1 0
 	}
 	ifx true(wcs_race_debugging) do
 	{
